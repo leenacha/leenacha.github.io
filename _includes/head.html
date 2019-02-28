@@ -1,5 +1,23 @@
-  <head>
+<head>
+  {% if page.title %}
+    <title>{{ page.title }} | Test Page</title>
+  {% else %}
     <title>Test Page: Don't Panic</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="This is a dangerous site.">
+  {% endif %}
+  <link href="/favicon.png" rel="icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100|Roboto" rel="stylesheet">
+  <link rel="stylesheet"
+        href="../font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<!-- <meta property="og:title" content="Dangerous Blog"/> -->
+<!-- <meta property="og:description" content="A dangerous site deserves a dangerous blog."/> -->
